@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>CSS Injection</title>
+    </head>
+    <body>
+        <h1>CSS Injection Test</h1>
+        <ul>
+            <li><a href="?css=Ym9keXtiYWNrZ3JvdW5kOnJlZDt9Cg==">RED</a></li>
+            <li><a href="?css=Ym9keXtiYWNrZ3JvdW5kOmJsdWU7fQo=">BLUE</a></li>
+            <li><a href="?css=<Ym9keXtiYWNrZ3JvdW5kOmdyZWVuO30K">GREEN</a></li>
+        </ul>
+
+        <input type="hidden" value="532fa8c0cde29"></input>
+        <style>
+        {% autoescape False %}
+        {{ css }}
+        {% endautoescape %}
+        </style>
+    </body>
+</html>
