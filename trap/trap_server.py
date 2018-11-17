@@ -22,4 +22,5 @@ def get():
     }))
 
 
-app.run(debug=True, port=8082)
+if __name__ == '__main__':
+    app.run(debug=True, port=8082)
